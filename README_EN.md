@@ -25,6 +25,20 @@ This is a lightweight backend proxy + Key management admin panel based on the op
 3) Run `node sever.js`
 4) Open `http://localhost:3000`
 
+### Using Docker / Docker Compose
+If you prefer deploying with Docker, you can use the provided `docker-compose.yml`.
+
+1) First, copy the configuration and data files:
+    ```bash
+    cp config.example.json config.json
+    cp data.example.json data.json
+    ```
+2) Start Docker Compose:
+    ```bash
+    docker-compose up -d
+    ```
+3) Open `http://localhost:3000`
+
 ## Configuration (config.json)
 - `ORIGINAL_WEBSITE`: upstream site address (recommended to self-host)
 - `SESSION_KEYS`: list of `{ id, label, value, expiresAt }`

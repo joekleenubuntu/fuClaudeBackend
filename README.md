@@ -27,6 +27,20 @@
 3) 运行 `node sever.js`
 4) 打开 `http://localhost:3000`
 
+### Docker / Docker Compose 启动
+如果你希望使用 Docker 部署，可以直接使用本项目的 `docker-compose.yml` 文件。
+
+1) 首先，你需要复制配置和数据文件：
+    ```bash
+    cp config.example.json config.json
+    cp data.example.json data.json
+    ```
+2) 运行 Docker Compose：
+    ```bash
+    docker-compose up -d
+    ```
+3) 打开 `http://localhost:3000`
+
 ## 配置说明（config.json）
 - `ORIGINAL_WEBSITE`: 上游站点地址，建议自己部署
 - `SESSION_KEYS`: `{ id, label, value, expiresAt }` 列表
